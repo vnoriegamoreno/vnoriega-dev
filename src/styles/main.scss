@@ -1,0 +1,10 @@
+@forward './fonts';
+@use './variables' as *;
+@use './base' as *;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: $neutral-100;
+    background-color: $primary-900;
+  }
+}
