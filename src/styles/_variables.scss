@@ -9,17 +9,42 @@ $neutral-300: #D9D9D9;
 $neutral-100: #FFF4E2;
 $neutral-000: #FFFFFF;
 
+// Breakpoints
+$breakpoint-mobile: 768px;
+
 // Typography
 $font-family-base: 'Manrope', 'system-ui', '-apple-system', 'sans-serif';
 $font-family-secondary: 'Roboto', 'Arial', 'sans-serif';
 
-$font-size-base: 1em;  // Added this line
-$font-size-title: 28px;
-$font-size-heading: 24px;
-$font-size-subheading: 20px;
-$font-size-body: 18px;
-$font-size-small: 16px;
-$font-size-xs: 12px;
+$font-sizes: (
+  mobile: (
+    base: 1em,
+    title: 24px,
+    heading: 20px,
+    subheading: 18px,
+    body: 16px,
+    small: 14px,
+    xs: 12px
+  ),
+  desktop: (
+    base: 1em,
+    title: 28px,
+    heading: 24px,
+    subheading: 20px,
+    body: 18px,
+    small: 16px,
+    xs: 12px
+  )
+);
+
+// Mixin to use responsive font sizes
+@mixin responsive-font($size) {
+  font-size: map-get(map-get($font-sizes, mobile), $size);
+  
+  @media (min-width: $breakpoint-mobile) {
+    font-size: map-get(map-get($font-sizes, desktop), $size);
+  }
+}
 
 $line-height-base: 1.5;
 

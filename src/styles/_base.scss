@@ -2,10 +2,10 @@
 @use 'mixins' as *;
 
 :root {
-  font-family: $font-family-base;
-  line-height: $line-height-base;
-  font-weight: 400;
   color-scheme: dark;
+  font-family: $font-family-base;
+  font-weight: 400;
+  line-height: $line-height-base;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -14,16 +14,8 @@
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  margin: 30px;
+  min-height: calc(100vh - 60px);
   @include flex-center;
-}
-
-button {
-  @include button-base;
-  
-  &:hover {
-    border-color: $neutral-100;
-  }
+  align-items: inherit;
 }

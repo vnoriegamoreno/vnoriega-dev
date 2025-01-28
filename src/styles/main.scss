@@ -1,6 +1,12 @@
 @forward './fonts';
 @use './variables' as *;
 @use './base' as *;
+@use './components/main-content' as *;
+
+// Global text styles
+h1, h2, h3, h4, h5, h6, p, span {
+  letter-spacing: 0.05em;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
