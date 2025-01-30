@@ -1,8 +1,13 @@
 @forward './fonts';
 @use './variables' as *;
 @use './base' as *;
-@use './components/main-content' as *;
+
+// Components styles
+@use './components/cover-letter' as *;
 @use './components/about' as *;
+@use './components/projects' as *;
+@use './components/shared/projectcard' as *;
+@use './components/shared/pill' as *;
 
 // Global text styles
 h1, h2, h3, h4, h5, h6, p, span {
@@ -12,6 +17,6 @@ h1, h2, h3, h4, h5, h6, p, span {
 @media (prefers-color-scheme: dark) {
   :root {
     color: $neutral-100;
-    background-color: $primary-900;
+    background: $gradient-dark;
   }
 }

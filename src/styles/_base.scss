@@ -6,7 +6,7 @@
   font-family: $font-family-base;
   font-weight: 400;
   line-height: $line-height-base;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,8 +14,8 @@
 }
 
 body {
-  margin: 30px;
-  min-height: calc(100vh - 60px);
   @include flex-center;
   align-items: inherit;
+  margin: 30px;
+  min-height: calc(100vh - 60px);
 }
