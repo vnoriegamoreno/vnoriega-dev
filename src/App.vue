@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import CoverLetter from './components/CoverLetter.vue';
 import About from './components/About.vue';
+import Projects from './components/Projects.vue';
 </script>
 
 <template>
-  <div>
-    <CoverLetter />
-    <About />
-  </div>
+  <main>
+    <header>
+      <CoverLetter />
+    </header>
+    <article>
+      <About />
+      <Projects />
+    </article>
+  </main>
 </template>
 
 <style scoped>

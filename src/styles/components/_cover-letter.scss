@@ -17,28 +17,28 @@
 
   .title {
     @include responsive-font(title);
-    margin: 0 auto;
-    width: fit-content;
-    position: relative;
     border-right: 2px solid transparent;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
 
     .long-text, .short-text {
       display: block;
-      white-space: nowrap;
       overflow: hidden;
       text-align: center;
+      white-space: nowrap;
     }
 
     .short-text {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 0;
-      opacity: 0;
       border-right: 2px solid transparent;
+      left: 50%;
+      opacity: 0;
       padding-right: 5px;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
     }
 
     .long-text { width: 0; }
@@ -107,8 +107,8 @@
 
   .body {
     @include responsive-font(body);
-    margin: 8px 0 0 0;
     font-weight: 200;
+    margin: 8px 0 0 0;
   }
 }
 
