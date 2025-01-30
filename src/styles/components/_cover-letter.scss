@@ -16,13 +16,13 @@
   text-align: center;
 
   .title {
-    @include responsive-font(title);
     border-right: 2px solid transparent;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     position: relative;
     width: fit-content;
+    @include responsive-font(title);
 
     .long-text, .short-text {
       display: block;
@@ -41,7 +41,9 @@
       transform: translateX(-50%);
     }
 
-    .long-text { width: 0; }
+    .long-text { 
+      width: 0; 
+    }
 
     &.typing-animation {
       border-right: none;
@@ -100,15 +102,15 @@
 }
 
 .heading {
-    @include responsive-font(heading);
-    font-weight: 500;
-    margin: 20px 0 0 0;
-    text-transform: uppercase;
+  font-weight: 500;
+  margin: 20px 0 0 0;
+  text-transform: uppercase;
+  @include responsive-font(heading);
 
   .body {
-    @include responsive-font(body);
     font-weight: 200;
     margin: 8px 0 0 0;
+    @include responsive-font(body);
   }
 }
 
