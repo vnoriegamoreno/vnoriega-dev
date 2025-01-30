@@ -2,27 +2,25 @@
 @use '../mixins' as *;
 
 .about {
-
   &-title {
-    @include flex-center;
-    @include responsive-font(title);
     color: $neutral-100;
     font-family: $font-family-secondary;
     font-weight: 800;
     letter-spacing: 0.05em;
     margin-bottom: 45px;
     margin-top: 60px;
+    @include flex-center;
+    @include responsive-font(title);
   }
 
   &-content {
-
     p {
-      @include responsive-font(body);
       color: $neutral-100;
       letter-spacing: 0.02em;
       line-height: 22px;
       margin-top: 18px;
       text-align: justify;
+      @include responsive-font(body);
 
       &:first-child {
         margin-top: 0;

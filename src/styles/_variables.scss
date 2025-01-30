@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 // Colors
 $primary-900: #111A23;
 $primary-800: #1B2632;
@@ -39,10 +41,10 @@ $font-sizes: (
 
 // Mixin to use responsive font sizes
 @mixin responsive-font($size) {
-  font-size: map-get(map-get($font-sizes, mobile), $size);
+  font-size: map.get(map.get($font-sizes, mobile), $size);
   
   @media (min-width: $breakpoint-mobile) {
-    font-size: map-get(map-get($font-sizes, desktop), $size);
+    font-size: map.get(map.get($font-sizes, desktop), $size);
   }
 }
 

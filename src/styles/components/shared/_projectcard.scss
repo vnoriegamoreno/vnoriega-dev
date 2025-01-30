@@ -5,37 +5,37 @@
   margin-bottom: 45px;
 
   &-title {
-    @include flex-center;
-    @include responsive-font(subheading);
     color: $neutral-100;
     font-family: $font-family-secondary;
     font-weight: 800;
     margin: 0 auto 20px auto;
+    @include flex-center;
+    @include responsive-font(subheading);
   }
 
   &-content {
     margin: 20px auto;
 
     p {
-      @include responsive-font(body);
       font-weight: 300;
       letter-spacing: 0;
       line-height: 22px;
       margin: 0;
       text-align: justify;
+      @include responsive-font(body);
     }
   }
 
   &-tech-stack {
-    @include flex-center;
     gap: 8px;
+    @include flex-center;
   }
 
   &-image {
-    @include flex-center;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
+    @include flex-center;
 
     img {
       width: 100%;
