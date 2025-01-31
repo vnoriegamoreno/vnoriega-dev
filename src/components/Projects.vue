@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import ProjectCard from './shared/ProjectCard.vue';
+import RightArrowIcon from './icons/RightArrowIcon.vue';
 
 const projects = [
   {
@@ -37,5 +38,17 @@ const projects = [
         role="listitem"
       />
     </div>
+    <p class="projects-link">
+      <a 
+        href="#" 
+        title="View complete portfolio of projects"
+        aria-label="Navigate to full projects portfolio"
+        class="projects-link-text"
+        @click.prevent
+      >
+        View All The Projects
+        <RightArrowIcon />
+      </a>
+    </p>
   </section>
 </template>
