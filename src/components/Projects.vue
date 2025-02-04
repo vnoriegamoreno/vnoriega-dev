@@ -1,27 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import ProjectCard from './shared/ProjectCard.vue';
 import RightArrowIcon from './icons/RightArrowIcon.vue';
+import { projects } from '../mocks/projects';
 
-const projects = [
-  {
-    title: "Build a E-Commerce App",
-    description: "Web app for managing eCommerce operations: track sales, manage inventory in real-time, process payments securely, and track orders. Gain insights into product performance, create personalized promotions, and manage discounts to boost engagement and drive sales.",
-    src: "/src/assets/poktapok.png",
-    techStack: ['Shopify', 'React', 'Tailwind CSS']
-  },
-  {
-    title: "Build a E-Commerce App",
-    description: "Web app for managing eCommerce operations: track sales, manage inventory in real-time, process payments securely, and track orders. Gain insights into product performance, create personalized promotions, and manage discounts to boost engagement and drive sales.",
-    src: "/src/assets/poktapok.png",
-    techStack: ['Shopify', 'React', 'Tailwind CSS']
-  },
-  {
-    title: "Build a E-Commerce App",
-    description: "Web app for managing eCommerce operations: track sales, manage inventory in real-time, process payments securely, and track orders. Gain insights into product performance, create personalized promotions, and manage discounts to boost engagement and drive sales.",
-    src: "/src/assets/poktapok.png",
-    techStack: ['Shopify', 'React', 'Tailwind CSS']
-  }
-];
+const showViewAll = computed(() => projects.length >= 3);
 </script>
 
 <template>
@@ -38,7 +21,7 @@ const projects = [
         role="listitem"
       />
     </div>
-    <p class="projects-link">
+    <p v-if="showViewAll" class="projects-link">
       <a 
         href="#" 
         title="View complete portfolio of projects"

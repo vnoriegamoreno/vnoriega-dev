@@ -28,6 +28,7 @@
 
   &-tech-stack {
     gap: 8px;
+    flex-wrap: wrap;
     @include flex-center;
   }
 
