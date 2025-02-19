@@ -10,6 +10,7 @@
 @use './components/shared/pill' as *;
 @use './components/articles' as *;
 @use './components/shared/postcard' as *;
+@use './components/footer' as *;
 
 // Global text styles
 h1, h2, h3, h4, h5, h6, p, span {
