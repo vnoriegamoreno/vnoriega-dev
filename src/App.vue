@@ -3,6 +3,7 @@ import CoverLetter from './components/CoverLetter.vue';
 import About from './components/About.vue';
 import Projects from './components/Projects.vue';
 import Articles from './components/Articles.vue';
+import Footer from './components/Footer.vue';
 </script>
 
 <template>
@@ -15,6 +16,7 @@ import Articles from './components/Articles.vue';
       <Projects />
       <Articles />
     </article>
+    <Footer />
   </main>
 </template>
 
