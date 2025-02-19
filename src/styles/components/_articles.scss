@@ -1,0 +1,32 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.articles {
+  &-title {
+    @include responsive-font(title);
+    color: $neutral-100;
+    font-family: $font-family-secondary;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    margin-bottom: 45px;
+    margin-top: 60px;
+    @include flex-center;
+    @include responsive-font(subheading);
+  }
+
+  &-link {
+    font-family: $font-family-secondary;
+    margin: 15px 0 0 0;
+    @include flex-center;
+    @include responsive-font(body);
+    
+    a {
+      align-items: center;
+      color: $neutral-100;
+      display: flex;
+      font-weight: 300;
+      gap: 2px;
+      text-decoration: none;
+    }
+  }
+}
