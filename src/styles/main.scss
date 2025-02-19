@@ -8,6 +8,8 @@
 @use './components/projects' as *;
 @use './components/shared/projectcard' as *;
 @use './components/shared/pill' as *;
+@use './components/articles' as *;
+@use './components/shared/postcard' as *;
 
 // Global text styles
 h1, h2, h3, h4, h5, h6, p, span {
