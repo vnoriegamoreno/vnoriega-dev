@@ -4,7 +4,7 @@ import ProjectCard from './shared/ProjectCard.vue';
 import RightArrowIcon from './icons/RightArrowIcon.vue';
 import { projects } from '../mocks/projects';
 
-const showViewAll = computed(() => projects.length >= 3);
+const showViewAll = computed(() => projects.length > 3);
 </script>
 
 <template>

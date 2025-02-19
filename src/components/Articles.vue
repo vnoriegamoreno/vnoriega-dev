@@ -1,7 +1,10 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import RightArrowIcon from './icons/RightArrowIcon.vue';
 import PostCard from './shared/PostCard.vue';
 import { articles } from '../mocks/posts';
+
+const showViewAll = computed(() => articles.length > 3);
 </script>
 
 <template>
@@ -16,7 +19,7 @@ import { articles } from '../mocks/posts';
         :date="article.yearPublished"
       />
     </div>
-    <p class="articles-link">
+    <p v-if="showViewAll" class="articles-link">
       <a 
         href="#" 
         title="View all list of articles published"
