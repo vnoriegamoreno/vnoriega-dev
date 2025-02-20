@@ -20,7 +20,13 @@ import CvIcon from './icons/CvIcon.vue';
       <p class="body">I design and build digital experiences</p>
     </article>
     <nav class="social-media" aria-label="Social media links">
-      <a href="/path-to-your-cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Download CV">
+      <a 
+        href="/src/assets/resume.pdf" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        aria-label="Download CV"
+        download="resume.pdf"
+      >
         <CvIcon />
       </a>
       <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
