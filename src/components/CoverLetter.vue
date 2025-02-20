@@ -7,7 +7,7 @@ import CvIcon from './icons/CvIcon.vue';
 <template>
   <section class="cover-letter-section">
     <figure class="avatar">
-      <img src="/src/assets/profile-x4.png" alt="Vicente Noriega's profile photo">
+      <img src="/assets/profile-x4.png" alt="Vicente Noriega's profile photo">
     </figure>
     <article class="cover-letter">
       <h1 class="title typing-animation">
@@ -19,7 +19,7 @@ import CvIcon from './icons/CvIcon.vue';
     </article>
     <nav class="social-media" aria-label="Social media links">
       <a 
-        href="/src/assets/resume.pdf" 
+        href="/assets/resume.pdf" 
         target="_blank" 
         rel="noopener noreferrer" 
         aria-label="Download CV"
