@@ -29,18 +29,19 @@ import CvIcon from './icons/CvIcon.vue';
       >
         <CvIcon />
       </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+      <a href="https://linkedin.com/in/vnoriegadev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
         <LinkedinIcon />
       </a>
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+      <a href="https://github.com/vnoriegamoreno" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
         <GithubIcon />
       </a>
-      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+      <!-- TODO: Once that I have available this social media I should enable them -->
+      <!-- <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
         <InstagramIcon />
       </a>
       <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" aria-label="TikTok Profile">
         <TiktokIcon />
-      </a>
+      </a> -->
     </nav>
   </section>
 </template>
