@@ -11,7 +11,7 @@
     margin-bottom: 45px;
     margin-top: 60px;
     @include flex-center;
-    @include responsive-font(subheading);
+    @include responsive-font(title);
   }
   
   &-link {

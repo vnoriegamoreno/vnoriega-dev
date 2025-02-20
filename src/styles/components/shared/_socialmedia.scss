@@ -1,0 +1,17 @@
+.social-media {
+  display: flex;
+  gap: 33px;
+  justify-content: center;
+  margin-top: 60px;
+
+  a {
+    align-items: center;
+    display: flex;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

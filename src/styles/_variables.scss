@@ -21,10 +21,10 @@ $font-family-secondary: 'Roboto', 'Arial', 'sans-serif';
 $font-sizes: (
   mobile: (
     base: 1em,
-    title: 24px,
-    heading: 20px,
-    subheading: 18px,
-    body: 16px,
+    title: 26px,
+    heading: 22px,
+    subheading: 20px,
+    body: 18px,
     small: 14px,
     xs: 12px
   ),
@@ -42,7 +42,6 @@ $font-sizes: (
 // Mixin to use responsive font sizes
 @mixin responsive-font($size) {
   font-size: map.get(map.get($font-sizes, mobile), $size);
-  
   @media (min-width: $breakpoint-mobile) {
     font-size: map.get(map.get($font-sizes, desktop), $size);
   }

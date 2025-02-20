@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import RightArrowIcon from './icons/RightArrowIcon.vue';
+import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
 import PostCard from './shared/PostCard.vue';
 import { articles } from '../mocks/posts';
 

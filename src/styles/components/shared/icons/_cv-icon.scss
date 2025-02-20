@@ -1,4 +1,4 @@
-@use '../../variables' as *;
+@use '../../../variables' as *;
 
 .cv-icon {
   align-items: center;
@@ -7,11 +7,11 @@
   color: $primary-900;
   display: flex;
   font-family: $font-family-secondary;
-  font-size: 17px;
   font-weight: 800;
-  height: 26px;
+  height: 32px;
   justify-content: center;
   letter-spacing: 0.05em;
   line-height: 15px;
-  width: 26px;
+  width: 32px;
+  @include responsive-font(body);
 }

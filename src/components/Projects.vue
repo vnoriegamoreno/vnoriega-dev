@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import ProjectCard from './shared/ProjectCard.vue';
-import RightArrowIcon from './icons/RightArrowIcon.vue';
+import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
 import { projects } from '../mocks/projects';
 
 const showViewAll = computed(() => projects.length > 3);

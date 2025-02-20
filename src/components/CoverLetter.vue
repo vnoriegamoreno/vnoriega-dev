@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import LinkedinIcon from './icons/LinkedinIcon.vue';
-import GithubIcon from './icons/GithubIcon.vue';
-import CvIcon from './icons/CvIcon.vue';
+import SocialMedia from './shared/SocialMedia.vue';
 </script>
 
 <template>
@@ -10,29 +8,10 @@ import CvIcon from './icons/CvIcon.vue';
       <img src="/assets/profile-x4.png" alt="Vicente Noriega's profile photo">
     </figure>
     <article class="cover-letter">
-      <h1 class="title typing-animation">
-        <span class="long-text">VICENTE NORIEGA</span>
-        <span class="short-text">VNORIEGA</span>
-      </h1>
+      <h1 class="title">VNORIEGA</h1>
       <h2 class="heading">Software Engineer</h2>
       <p class="body">I design and build digital experiences</p>
     </article>
-    <nav class="social-media" aria-label="Social media links">
-      <a 
-        href="/assets/resume.pdf" 
-        target="_blank" 
-        rel="noopener noreferrer" 
-        aria-label="Download CV"
-        download="resume.pdf"
-      >
-        <CvIcon />
-      </a>
-      <a href="https://linkedin.com/in/vnoriegadev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
-        <LinkedinIcon />
-      </a>
-      <a href="https://github.com/vnoriegamoreno" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
-        <GithubIcon />
-      </a>
-    </nav>
+    <SocialMedia />
   </section>
 </template>

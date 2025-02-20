@@ -1,8 +1,9 @@
 @use '../variables' as *;
-@use './icons/cv-icon' as *;
+@use './shared/icons/cv-icon' as *;
 
 .avatar {
   text-align: center;
+  margin-top: 20px;
 
   img {
     border-radius: 50%;
@@ -18,52 +19,11 @@
   .title {
     border-right: 2px solid transparent;
     display: flex;
+    font-size: 28px;
     justify-content: center;
     margin: 0 auto;
     position: relative;
     width: fit-content;
-    @include responsive-font(title);
-
-    .long-text, .short-text {
-      display: block;
-      overflow: hidden;
-      text-align: center;
-      white-space: nowrap;
-    }
-
-    .short-text {
-      border-right: 2px solid transparent;
-      left: 50%;
-      opacity: 0;
-      padding-right: 5px;
-      position: absolute;
-      top: 0;
-      transform: translateX(-50%);
-    }
-
-    .long-text { 
-      width: 0; 
-    }
-
-    &.typing-animation {
-      border-right: none;
-      
-      .long-text {
-        border-right: 2px solid transparent;
-        animation: 
-          typing 2s steps(15) 1s forwards,
-          erasing 1.5s steps(13) 4s forwards,
-          cursor 1s step-end infinite 1s,
-          hide-cursor 0s 5.5s forwards;
-      }
-      .short-text {
-        animation: 
-          wait 5.5s,
-          appear 0s 5.5s forwards,
-          typing-short 1s steps(8) 5.5s forwards,
-          cursor 1s step-end 5.5s infinite;
-      }
-    }
   }
 
   .body {
@@ -71,67 +31,14 @@
   }
 }
 
-@keyframes typing {
-  from { width: 0 }
-  to { width: 15ch }
-}
-
-@keyframes erasing {
-  from { width: 15ch }
-  to { width: 0 }
-}
-
-@keyframes typing-short {
-  from { width: 0 }
-  to { width: 8ch }
-}
-
-@keyframes appear {
-  to { opacity: 1 }
-}
-
-@keyframes wait {
-  from, to { width: 0 }
-}
-
-@keyframes cursor {
-  from, to { border-right-color: transparent }
-  50% { border-right-color: $neutral-100 }
-}
-
-@keyframes hide-cursor {
-  to {
-    border-right-color: transparent;
-  }
-}
-
 .heading {
-  font-weight: 500;
-  margin: 20px 0 0 0;
-  text-transform: uppercase;
+  font-weight: 400;
+  margin: 25px 0 0 0;
   @include responsive-font(heading);
 
   .body {
     font-weight: 200;
     margin: 8px 0 0 0;
     @include responsive-font(body);
-  }
-}
-
-.social-media {
-  display: flex;
-  gap: 33px;
-  justify-content: center;
-  margin-top: 30px;
-
-  a {
-    align-items: center;
-    display: flex;
-    text-decoration: none;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }
