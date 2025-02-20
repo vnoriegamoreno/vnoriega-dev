@@ -1,8 +1,6 @@
 <script setup lang="ts">
 import LinkedinIcon from './icons/LinkedinIcon.vue';
 import GithubIcon from './icons/GithubIcon.vue';
-import InstagramIcon from './icons/InstagramIcon.vue';
-import TiktokIcon from './icons/TiktokIcon.vue';
 import CvIcon from './icons/CvIcon.vue';
 </script>
 
