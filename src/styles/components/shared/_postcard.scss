@@ -25,7 +25,7 @@
     h3, p {
       margin: 0;
       text-align: justify;
-      @include responsive-font(body);
+      @include responsive-font(v1);
     }
 
     h3 {
