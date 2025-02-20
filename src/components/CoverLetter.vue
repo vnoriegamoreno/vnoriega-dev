@@ -35,13 +35,6 @@ import CvIcon from './icons/CvIcon.vue';
       <a href="https://github.com/vnoriegamoreno" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
         <GithubIcon />
       </a>
-      <!-- TODO: Once that I have available this social media I should enable them -->
-      <!-- <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
-        <InstagramIcon />
-      </a>
-      <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer" aria-label="TikTok Profile">
-        <TiktokIcon />
-      </a> -->
     </nav>
   </section>
 </template>
