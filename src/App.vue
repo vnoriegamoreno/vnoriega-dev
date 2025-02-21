@@ -7,16 +7,24 @@ import Footer from './components/Footer.vue';
 </script>
 
 <template>
-  <main>
-    <header>
-      <CoverLetter />
-    </header>
-    <article>
-      <About />
-      <Projects />
-      <Articles />
-    </article>
-    <Footer />
+  <main id="main-content" role="main">
+      <header class="site-header" role="banner">
+        <CoverLetter />
+      </header>
+      <div class="content-wrapper">
+        <section id="about" aria-label="About">
+          <About />
+        </section>
+        <section id="projects" aria-label="Projects">
+          <Projects />
+        </section>
+        <section id="articles" aria-label="Articles">
+          <Articles />
+        </section>
+      </div>
+      <footer class="site-footer" role="contentinfo">
+        <Footer />
+      </footer>
   </main>
 </template>
 
