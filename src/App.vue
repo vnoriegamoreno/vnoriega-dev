@@ -21,10 +21,10 @@ import Footer from './components/Footer.vue';
         <section id="articles" aria-label="Articles">
           <Articles />
         </section>
+        <footer class="site-footer" role="contentinfo">
+          <Footer />
+        </footer>
       </div>
-      <footer class="site-footer" role="contentinfo">
-        <Footer />
-      </footer>
   </main>
 </template>
 

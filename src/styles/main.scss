@@ -3,6 +3,7 @@
 @use './base' as *;
 
 // Components styles
+@use './app' as *;
 @use './components/cover-letter' as *;
 @use './components/shared/socialmedia' as *;
 @use './components/about' as *;
