@@ -4,15 +4,22 @@ import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
 import PostCard from './shared/PostCard.vue';
 import { articles } from '../mocks/posts';
 
+interface Article {
+  title: string;
+  src: string;
+  yearPublished: string;
+}
+
+const canShowArticles = computed(() => articles.length >= 1);
 const showViewAll = computed(() => articles.length > 3);
 </script>
 
 <template>
-  <section class="articles" aria-labelledby="articles-heading">
+  <section v-if="canShowArticles" class="articles" aria-labelledby="articles-heading">
     <h2 id="articles-heading" class="articles-title">Articles</h2>
     <div class="articles-grid">
       <PostCard
-        v-for="article in articles"
+        v-for="article in articles as Article[]"
         :key="article.title"
         :src="article.src"
         :title="article.title"
