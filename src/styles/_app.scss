@@ -1,8 +1,6 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-$all-height: calc(100vh - 60px);
-
 @media (min-width: $breakpoint-mobile) {
   #main-content {
     display: flex;
