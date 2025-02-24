@@ -11,9 +11,10 @@
     }
 
     .content-wrapper {
-      height: $all-height;
+      height: calc($all-height - 200px);
       overflow: scroll;
-      width: 500px;
+      padding: 200px 20px 0 0;
+      width: calc(500px - 20px);
     }
   }
 }
