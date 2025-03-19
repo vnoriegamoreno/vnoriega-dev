@@ -1,20 +1,50 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-@media (min-width: $breakpoint-mobile) {
-  #main-content {
-    display: flex;
+#main-content {
+  display: flex;
+  width: 100%;
 
+  .site-header {
+    flex: 0 0 327px;
+    margin-right: 123px;
+    @include flex-center;
+  }
+
+  .content-wrapper {
+    flex: 1;
+    height: calc($all-height - 200px);
+    padding: 200px 20px 0 0;
+    width: calc(500px - 20px);
+    overflow-y: scroll;
+    width: 100%;
+    
+    /* TODO: Instead of hide scrollbar It should use the scrollbar of the main window */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  #main-content {
     .site-header {
+      flex: 1;
       height: $all-height;
-      @include flex-center;
+      margin-right: 0;
     }
 
     .content-wrapper {
-      height: calc($all-height - 200px);
-      overflow: scroll;
-      padding: 200px 20px 0 0;
-      width: calc(500px - 20px);
+      flex: 2;
+      height: $all-height;
+      margin-left: 20px;
+      padding: 0 20px 0 0;
+      width: calc(500px - 40px);
     }
   }
 }
