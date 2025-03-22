@@ -14,13 +14,12 @@
 }
 
 body {
-  align-items: inherit;
   margin: 60px;
-  height: $all-height;
+  height: $full-height;
   @include flex-center;
 }
 
-@media (min-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-mobile) {
   body {
     margin: 30px;
   }

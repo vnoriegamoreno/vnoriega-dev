@@ -13,9 +13,7 @@
 
   .content-wrapper {
     flex: 1;
-    height: calc($all-height - 200px);
-    padding: 200px 20px 0 0;
-    width: calc(500px - 20px);
+    height: $full-height;
     overflow-y: scroll;
     width: 100%;
     
@@ -35,13 +33,13 @@
   #main-content {
     .site-header {
       flex: 1;
-      height: $all-height;
+      height: $full-height;
       margin-right: 0;
     }
 
     .content-wrapper {
       flex: 2;
-      height: $all-height;
+      height: $full-height;
       margin-left: 20px;
       padding: 0 20px 0 0;
       width: calc(500px - 40px);
