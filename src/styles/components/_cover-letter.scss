@@ -27,7 +27,8 @@
   }
 
   .body {
-    font-weight: lighter;
+    font-weight: 200;
+    margin: 8px 0 0 0;
     @include responsive-font(subheading);
   }
 }
@@ -36,12 +37,6 @@
   font-weight: 400;
   margin: 20px 0 0 0;
   @include responsive-font(heading);
-
-  .body {
-    font-weight: 200;
-    margin: 8px 0 0 0;
-    @include responsive-font(body);
-  }
 }
 
 
