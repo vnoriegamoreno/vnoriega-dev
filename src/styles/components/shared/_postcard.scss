@@ -2,14 +2,15 @@
 @use '../../mixins' as *;
 
 .post-card {
+  flex-direction: column;
   margin-bottom: 45px;
-  @include flex-center;
+  width: 293px;
   @include responsive-font(xs);
 
   &-image {
     margin: 0 18px 0 0;
     overflow: hidden;
-    width: 120px;
+    width: 100%;
     @include flex-center;
 
     img {
@@ -23,15 +24,19 @@
     flex: 1;
 
     h3, p {
+      font-size: 16px;
+      font-weight: 300;
       margin: 0;
       text-align: justify;
-      @include responsive-font(v1);
     }
 
     h3 {
       font-family: $font-family-secondary;
       font-weight: bold;
-      @include responsive-font(subheading);
+    }
+
+    p {
+      letter-spacing: 0;
     }
   }
 }

@@ -5,20 +5,20 @@
   &-title {
     color: $neutral-100;
     font-family: $font-family-secondary;
-    font-weight: 800;
+    font-weight: 900;
     letter-spacing: 0.05em;
-    margin-bottom: 45px;
-    margin-top: 60px;
-    @include flex-center;
-    @include responsive-font(title);
+    margin: 60px 0 45px 0;
+    text-align: left;
+    @include responsive-font(medium);
   }
 
   &-content {
     p {
       color: $neutral-100;
+      font-weight: $font-weight-lighter;
       letter-spacing: 0.02em;
       line-height: 22px;
-      margin: 25px 0 0 0;
+      margin: 18px 0 0 0;
       text-align: justify;
       @include responsive-font(body);
 
