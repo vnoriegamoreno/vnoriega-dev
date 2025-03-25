@@ -40,3 +40,15 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .post-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &-image {
+      flex: 1;
+    }
+  } 
+}

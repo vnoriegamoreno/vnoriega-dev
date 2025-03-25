@@ -2,7 +2,6 @@
 @use '../mixins' as *;
 
 .projects {
-
   &-title {
     color: $neutral-100;
     font-family: $font-family-secondary;
@@ -12,13 +11,13 @@
     text-align: left;
     @include responsive-font(medium);
   }
-  
+
   &-link {
     font-family: $font-family-secondary;
     margin: 15px 0 0 0;
     @include flex-center;
     @include responsive-font(body);
-    
+
     a {
       align-items: center;
       color: $neutral-100;
@@ -26,6 +25,14 @@
       font-weight: 300;
       gap: 2px;
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .projects {
+    &-title {
+      text-align: center;
     }
   }
 }

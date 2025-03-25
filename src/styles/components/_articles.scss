@@ -44,3 +44,11 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .articles {
+    &-title {
+      text-align: center;
+    }
+  }
+}

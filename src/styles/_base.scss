@@ -24,3 +24,9 @@ body {
     margin: 30px;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  body {
+    height: auto;
+  }
+}

@@ -41,6 +41,8 @@
 
 @media (max-width: $breakpoint-mobile) {
   #main-content {
+    flex-direction: column;
+
     .site-header {
       flex: 1;
       height: $full-height;
@@ -50,9 +52,10 @@
     .content-wrapper {
       flex: 2;
       height: $full-height;
-      margin-left: 20px;
-      padding: 0 20px 0 0;
-      width: calc(500px - 40px);
+      margin-left: 0;
+      padding: 0;
+      width: 100%;
+      overflow-y: inherit;
     }
   }
 }

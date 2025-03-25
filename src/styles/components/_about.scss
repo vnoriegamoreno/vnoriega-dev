@@ -28,3 +28,11 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .about {
+    &-title {
+      text-align: center;
+    }
+  }
+}
