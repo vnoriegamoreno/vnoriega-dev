@@ -12,12 +12,12 @@ $neutral-100: #FFF4E2;
 $neutral-000: #FFFFFF;
 
 // Breakpoints
-$breakpoint-mobile: 480px;
+$breakpoint-mobile: 560px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1280px;
 
 // variables
-$full-height: calc(100vh - 120px);
+$full-height: calc(100vh - var(--viewport-offset));
 $font-weight-black: 900;
 $font-weight-lighter: 300;
 
@@ -40,12 +40,12 @@ $font-sizes: (
   ),
   tablet: (
     base: 1em,
-    body: 18px,
+    body: 16px,
     heading: 22px,
-    large: 28px,
-    medium: 24px,
+    large: 24px,
+    medium: 20px,
     small: 14px,
-    subheading: 20px,
+    subheading: 16px,
     title: 26px,
     xs: 12px,
   ),
@@ -65,7 +65,12 @@ $font-sizes: (
 // Mixin to use responsive font sizes
 @mixin responsive-font($size) {
   font-size: map.get(map.get($font-sizes, mobile), $size);
-  @media (min-width: $breakpoint-mobile) {
+  
+  @media (min-width: $breakpoint-mobile) and (max-width: ($breakpoint-tablet - 1px)) {
+    font-size: map.get(map.get($font-sizes, tablet), $size);
+  }
+  
+  @media (min-width: $breakpoint-tablet) {
     font-size: map.get(map.get($font-sizes, desktop), $size);
   }
 }
@@ -78,3 +83,10 @@ $spacing-base: 1rem;
 
 // Gradients
 $gradient-dark: linear-gradient(180deg, rgba(17,26,35,1) 0%, rgba(21,32,43,1) 3%);
+
+:root {
+  --viewport-offset: 120px;
+  @media (max-width: $breakpoint-tablet) {
+    --viewport-offset: 60px;
+  }
+}

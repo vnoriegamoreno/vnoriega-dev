@@ -19,7 +19,7 @@ body {
   @include flex-center;
 }
 
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-tablet) {
   body {
     margin: 30px;
   }

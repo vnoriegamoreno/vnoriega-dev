@@ -39,18 +39,13 @@
   @include responsive-font(medium);
 }
 
-
-@media (max-width: $breakpoint-mobile) {
+@media (max-width: $breakpoint-tablet) {
   .avatar {
-    .img {
-      width: 135px;
-      height: 135px;
-    }
-  }
+    margin: 20px auto auto auto;
 
-  .cover-letter {
-    .body {
-      @include responsive-font(body);
+    img {
+      width: 200px;
+      height: 200px;
     }
   }
 }
