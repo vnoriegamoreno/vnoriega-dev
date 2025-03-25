@@ -16,7 +16,7 @@
   &-grid {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 120px;
+    column-gap: clamp(40px, calc(40px + (120 - 40) * ((100vw - 1185px) / (1280 - 1185))), 120px);
   }
 
   &-link {
@@ -32,6 +32,15 @@
       font-weight: 300;
       gap: 2px;
       text-decoration: none;
+    }
+  }
+}
+
+@media (max-width: 1185px) {
+  .articles {
+    &-grid {
+      display: flex;
+      align-items: flex-start;
     }
   }
 }

@@ -19,7 +19,6 @@
 
   &-image {
     flex: 0 0 321px;
-    height: 164px;
     margin: auto 45px auto auto;
     overflow: hidden;
     @include flex-center;
@@ -48,5 +47,18 @@
     gap: 8px;
     flex-wrap: wrap;
     @include flex-center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .project-card {
+    &-wrapper {
+      flex-direction: column;
+    }
+
+    &-image {
+      flex: 0 0 100%;
+      margin-right: 0;
+    }
   }
 }
