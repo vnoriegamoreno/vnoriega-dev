@@ -26,52 +26,26 @@ $font-family-base: 'Manrope', 'system-ui', '-apple-system', 'sans-serif';
 $font-family-secondary: 'Roboto', 'Arial', 'sans-serif';
 $font-family-tertiary: 'Poppins', 'Arial','sans-serif';
 
-$font-sizes: (
-  mobile: (
-    base: 1em,
-    body: 18px,
-    heading: 24px,
-    large: 26px,
-    medium: 22px,
-    small: 16px,
-    subheading: 18px,
-    title: 28px,
-    xs: 14px,
-  ),
-  tablet: (
-    base: 1em,
-    body: 16px,
-    heading: 22px,
-    large: 24px,
-    medium: 20px,
-    small: 14px,
-    subheading: 16px,
-    title: 26px,
-    xs: 12px,
-  ),
-  desktop: (
-    base: 1em,
-    body: 18px,
-    heading: 22px,
-    large: 28px,
-    medium: 24px,
-    small: 14px,
-    subheading: 20px,
-    title: 26px,
-    xs: 12px,
-  )
-);
-
 // Mixin to use responsive font sizes
 @mixin responsive-font($size) {
-  font-size: map.get(map.get($font-sizes, mobile), $size);
-  
-  @media (min-width: $breakpoint-mobile) and (max-width: ($breakpoint-tablet - 1px)) {
-    font-size: map.get(map.get($font-sizes, tablet), $size);
-  }
-  
-  @media (min-width: $breakpoint-tablet) {
-    font-size: map.get(map.get($font-sizes, desktop), $size);
+  @if $size == 'base' {
+    font-size: 1em;
+  } @else if $size == 'body' {
+    font-size: 18px;
+  } @else if $size == 'heading' {
+    font-size: 22px;
+  } @else if $size == 'large' {
+    font-size: 28px;
+  } @else if $size == 'medium' {
+    font-size: 24px;
+  } @else if $size == 'small' {
+    font-size: 14px;
+  } @else if $size == 'subheading' {
+    font-size: 20px;
+  } @else if $size == 'title' {
+    font-size: 26px;
+  } @else if $size == 'xs' {
+    font-size: 12px;
   }
 }
 
