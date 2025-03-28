@@ -1,6 +1,11 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
 #main-content {
   display: flex;
   max-width: 1280px;
@@ -10,23 +15,13 @@
     flex: 0 0 327px;
     margin-right: clamp(40px, calc(40px + (123 - 40) * ((100vw - 768px) / (1280 - 768))), 123px);
     @include flex-center;
+    position: sticky;
   }
 
   .content-wrapper {
     flex: 1;
     height: $full-height;
-    overflow-y: scroll;
     width: 100%;
-    
-    /* TODO: Instead of hide scrollbar It should use the scrollbar of the main window */
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    
-    /* Hide scrollbar for IE, Edge and Firefox */
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
   }
 }
 
@@ -47,6 +42,7 @@
       flex: 1;
       height: $full-height;
       margin-right: 0;
+      position: static;
     }
 
     .content-wrapper {

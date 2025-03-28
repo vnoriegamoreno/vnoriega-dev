@@ -13,6 +13,7 @@
 @use './components/articles' as *;
 @use './components/shared/postcard' as *;
 @use './components/footer' as *;
+@use './components/shared/announcements' as *;
 
 // Global text styles
 h1, h2, h3, h4, h5, h6, p, span {
@@ -22,6 +23,6 @@ h1, h2, h3, h4, h5, h6, p, span {
 @media (prefers-color-scheme: dark) {
   :root {
     color: $neutral-100;
-    background: $gradient-dark;
+    background: $background-dark;
   }
 }

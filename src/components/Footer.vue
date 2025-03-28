@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer" role="contentinfo" aria-label="Site footer">
+  <section class="footer" role="contentinfo" aria-label="Site footer">
       <div class="footer-content">
         <p class="footer-copyright">
           © 2025 <a 
@@ -10,5 +10,5 @@
           >Vicente Noriega</a>. All rights reserved.
         </p>
       </div>
-    </footer>
+    </section>
 </template>
