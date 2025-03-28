@@ -1,11 +1,6 @@
 @use './variables' as *;
 @use './mixins' as *;
 
-body {
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
 #main-content {
   display: flex;
   max-width: 1280px;
@@ -15,12 +10,10 @@ body {
     flex: 0 0 327px;
     margin-right: clamp(40px, calc(40px + (123 - 40) * ((100vw - 768px) / (1280 - 768))), 123px);
     @include flex-center;
-    position: sticky;
   }
 
   .content-wrapper {
     flex: 1;
-    height: $full-height;
     width: 100%;
   }
 }
@@ -37,17 +30,16 @@ body {
 @media (max-width: $breakpoint-mobile) {
   #main-content {
     flex-direction: column;
+    position: relative;
+    top: 30px;
 
     .site-header {
       flex: 1;
-      height: $full-height;
       margin-right: 0;
-      position: static;
     }
 
     .content-wrapper {
       flex: 2;
-      height: $full-height;
       margin-left: 0;
       padding: 0;
       width: 100%;
