@@ -12,6 +12,16 @@
   }
 }
 
+.cover-letter-section {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
 .cover-letter {
   margin-top: 30px;
   text-align: center;
@@ -40,12 +50,19 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .avatar {
-    margin: 20px auto auto auto;
+  .cover-letter-section {
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
 
+  .avatar {
     img {
       width: 200px;
       height: 200px;
     }
   }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .cover-letter-section { height: auto; }
 }
