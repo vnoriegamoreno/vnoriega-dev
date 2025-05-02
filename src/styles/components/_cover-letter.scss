@@ -17,7 +17,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: calc(100vh - 180px);
   position: sticky;
   top: 0;
 }
@@ -65,4 +65,19 @@
 
 @media (max-width: $breakpoint-mobile) {
   .cover-letter-section { height: auto; }
+}
+
+// TODO: Still need to check the properties of above media queries, looks like flex is not adjusting properly in landscane mobile screens; for now it is working fine.
+@media (max-height: 745px) { .avatar { display: none;} }
+@media (max-height: 450px) {
+  .cover-letter-section { height: calc(100vh - 100px); }
+  body {
+    margin: 50px 60px;
+  }
+}
+@media (max-height: 380px) {
+  .cover-letter-section { height: calc(100vh - 80px); }
+  body {
+    margin: 40px 60px;
+  }
 }
