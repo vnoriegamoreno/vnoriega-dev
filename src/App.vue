@@ -9,7 +9,7 @@ import Announcements from './components/shared/Announcements.vue';
 
 <template>
   <div>
-    <Announcements :announcements="['🚧 ¡WebSite Under Construction! 🚧']" />
+    <Announcements :announcements="['🚀 More Projects Coming Up ✨']" />
     <main id="main-content" role="main">
         <header class="site-header" role="banner">
           <CoverLetter />
