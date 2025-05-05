@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import SocialMedia from './shared/SocialMedia.vue';
+  import SocialMedia from './shared/SocialMedia.vue';
 </script>
 
 <template>
   <section class="cover-letter-section">
     <figure class="avatar">
-      <img src="/assets/profile-x4.png" alt="Vicente Noriega's profile photo">
+      <img src="/assets/profile-x4.png" alt="Vicente Noriega's profile photo" />
     </figure>
     <article class="cover-letter">
       <h1 class="title">VICENTE NORIEGA</h1>

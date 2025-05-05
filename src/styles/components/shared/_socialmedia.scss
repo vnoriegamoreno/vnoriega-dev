@@ -17,7 +17,8 @@
       opacity: 0.8;
     }
 
-    .linkedin-icon, .github-icon {
+    .linkedin-icon,
+    .github-icon {
       width: 30px;
       height: 30px;
     }
@@ -27,7 +28,8 @@
 @media (max-width: $breakpoint-mobile) {
   .social-media {
     a {
-      .linkedin-icon,.github-icon {
+      .linkedin-icon,
+      .github-icon {
         width: 26px;
         height: 26px;
       }

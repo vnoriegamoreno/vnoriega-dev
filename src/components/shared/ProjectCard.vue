@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import Pill from '../shared/Pill.vue';
-defineProps<{
-  title: string;
-  description: string;
-  src: string;
-  techStack: string[];
-}>();
+  import Pill from '../shared/Pill.vue';
+  defineProps<{
+    title: string;
+    description: string;
+    src: string;
+    techStack: string[];
+  }>();
 </script>
 
 <template>
@@ -16,24 +16,24 @@ defineProps<{
         <img :src="src" :alt="`${title} project preview`" />
       </figure>
       <div class="project-card-info">
-        <article 
-          class="project-card-content" 
+        <article
+          class="project-card-content"
           aria-label="Project description"
-          itemscope 
+          itemscope
           itemtype="http://schema.org/Article"
         >
           <p itemprop="description">{{ description }}</p>
         </article>
-        <footer 
-          class="project-card-tech-stack" 
-          role="list" 
+        <footer
+          class="project-card-tech-stack"
+          role="list"
           aria-label="Technologies used"
-          itemscope 
+          itemscope
           itemtype="http://schema.org/ItemList"
         >
-          <Pill 
-            v-for="tech in techStack" 
-            :key="tech" 
+          <Pill
+            v-for="tech in techStack"
+            :key="tech"
             :title="tech"
             role="listitem"
             itemprop="itemListElement"

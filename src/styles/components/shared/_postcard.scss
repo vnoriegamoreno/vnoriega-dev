@@ -23,7 +23,8 @@
   &-content {
     flex: 1;
 
-    h3, p {
+    h3,
+    p {
       font-size: 16px;
       font-weight: 300;
       margin: 0;
@@ -50,5 +51,5 @@
     &-image {
       flex: 1;
     }
-  } 
+  }
 }

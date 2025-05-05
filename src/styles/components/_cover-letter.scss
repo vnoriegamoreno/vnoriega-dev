@@ -64,20 +64,39 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  .cover-letter-section { height: auto; }
+  .cover-letter-section {
+    height: auto;
+  }
 }
 
 // TODO: Still need to check the properties of above media queries, looks like flex is not adjusting properly in landscane mobile screens; for now it is working fine.
 @media (max-height: 620px) {
-  .avatar { img { width: 150px; height: 150px; } }
-  .cover-letter { margin-top: 0px; }
+  .avatar {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
+  .cover-letter {
+    margin-top: 0px;
+  }
 }
 @media (max-height: 450px) {
-  body { margin: 50px 60px; }
-  .cover-letter-section { height: calc(100vh - 100px); }
-  .avatar { display: none; }
+  body {
+    margin: 50px 60px;
+  }
+  .cover-letter-section {
+    height: calc(100vh - 100px);
+  }
+  .avatar {
+    display: none;
+  }
 }
 @media (max-height: 380px) {
-  body { margin: 40px 60px; }
-  .cover-letter-section { height: calc(100vh - 80px); }
+  body {
+    margin: 40px 60px;
+  }
+  .cover-letter-section {
+    height: calc(100vh - 80px);
+  }
 }
