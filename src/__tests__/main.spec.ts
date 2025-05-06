@@ -5,8 +5,8 @@ import App from '../App.vue';
 // Mock Vue's createApp
 vi.mock('vue', () => ({
   createApp: vi.fn(() => ({
-    mount: vi.fn()
-  }))
+    mount: vi.fn(),
+  })),
 }));
 
 // Mock style import
@@ -14,7 +14,7 @@ vi.mock('../styles/main.scss', () => ({}));
 
 // Mock App component
 vi.mock('../App.vue', () => ({
-  default: {}
+  default: {},
 }));
 
 describe('main.ts', () => {

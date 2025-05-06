@@ -5,14 +5,14 @@ import CvIcon from '../../../../components/shared/icons/CvIcon.vue';
 describe('CvIcon.vue', () => {
   it('renders cv icon container', () => {
     const { container } = render(CvIcon);
-    
+
     const iconContainer = container.querySelector('.cv-icon');
     expect(iconContainer).toBeTruthy();
   });
 
   it('renders CV text correctly', () => {
     const { container } = render(CvIcon);
-    
+
     const text = container.querySelector('span');
     expect(text).toBeTruthy();
     expect(text?.textContent).toBe('CV');
@@ -20,7 +20,7 @@ describe('CvIcon.vue', () => {
 
   it('maintains correct HTML structure', () => {
     const { container } = render(CvIcon);
-    
+
     const iconContainer = container.querySelector('.cv-icon');
     expect(iconContainer?.tagName.toLowerCase()).toBe('div');
     expect(iconContainer?.children[0].tagName.toLowerCase()).toBe('span');
@@ -28,7 +28,7 @@ describe('CvIcon.vue', () => {
 
   it('has correct accessibility attributes', () => {
     const { container } = render(CvIcon);
-    
+
     const iconContainer = container.querySelector('.cv-icon');
     expect(iconContainer?.getAttribute('role')).toBe('button');
     expect(iconContainer?.getAttribute('aria-label')).toBe('Download CV');
@@ -36,7 +36,7 @@ describe('CvIcon.vue', () => {
 
   it('has correct schema.org metadata', () => {
     const { container } = render(CvIcon);
-    
+
     const iconContainer = container.querySelector('.cv-icon');
     const nameSpan = container.querySelector('span');
     const metaDescription = container.querySelector('meta');

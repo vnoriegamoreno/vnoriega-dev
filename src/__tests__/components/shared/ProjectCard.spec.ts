@@ -7,20 +7,20 @@ describe('ProjectCard.vue', () => {
     title: 'Test Project',
     description: 'Test Description',
     src: 'https://example.com/image.jpg',
-    techStack: ['Vue', 'TypeScript', 'Sass']
+    techStack: ['Vue', 'TypeScript', 'Sass'],
   };
 
   it('renders project card container', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
-    
+
     expect(container.querySelector('.project-card')).toBeTruthy();
   });
 
   it('renders title correctly', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const title = container.querySelector('.project-card-title');
@@ -29,7 +29,7 @@ describe('ProjectCard.vue', () => {
 
   it('renders image with correct src and alt text', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const image = container.querySelector('.project-card-image img');
@@ -40,7 +40,7 @@ describe('ProjectCard.vue', () => {
 
   it('displays description correctly', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const description = container.querySelector('[itemprop="description"]');
@@ -49,7 +49,7 @@ describe('ProjectCard.vue', () => {
 
   it('renders tech stack pills', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const techStackContainer = container.querySelector('.project-card-tech-stack');
@@ -63,19 +63,19 @@ describe('ProjectCard.vue', () => {
 
   it('has correct schema.org attributes', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const article = container.querySelector('[itemtype="http://schema.org/Article"]');
     const techList = container.querySelector('[itemtype="http://schema.org/ItemList"]');
-    
+
     expect(article).toBeTruthy();
     expect(techList).toBeTruthy();
   });
 
   it('has correct accessibility attributes', () => {
     const { container } = render(ProjectCard, {
-      props: mockProps
+      props: mockProps,
     });
 
     const card = container.querySelector('.project-card');

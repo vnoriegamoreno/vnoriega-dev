@@ -8,22 +8,25 @@ describe('Projects.vue', () => {
       title: 'Test Project 1',
       description: 'Test Description 1',
       src: 'https://example.com/image1.jpg',
-      techStack: ['Vue', 'TypeScript']
+      techStack: ['Vue', 'TypeScript'],
     },
     {
       title: 'Test Project 2',
       description: 'Test Description 2',
       src: 'https://example.com/image2.jpg',
-      techStack: ['React', 'JavaScript']
-    }
+      techStack: ['React', 'JavaScript'],
+    },
   ];
 
   beforeEach(() => {
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(mockProjects)
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockProjects),
+        })
+      )
+    );
   });
 
   it('fetches projects on mount', async () => {
@@ -58,11 +61,14 @@ describe('Projects.vue', () => {
 
   it('shows "View All" link when more than 3 projects', async () => {
     const manyProjects = [...mockProjects, ...mockProjects];
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(manyProjects)
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(manyProjects),
+        })
+      )
+    );
 
     const { container } = render(Projects);
     await vi.dynamicImportSettled();
@@ -72,7 +78,10 @@ describe('Projects.vue', () => {
   });
 
   it('handles fetch error gracefully', async () => {
-    vi.stubGlobal('fetch', vi.fn(() => Promise.reject('API Error')));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => Promise.reject('API Error'))
+    );
     const consoleSpy = vi.spyOn(console, 'debug').mockImplementation(() => {});
 
     render(Projects);
@@ -82,11 +91,14 @@ describe('Projects.vue', () => {
   });
 
   it('does not render section when no projects', async () => {
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve([])
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve([]),
+        })
+      )
+    );
 
     const { container } = render(Projects);
     await vi.dynamicImportSettled();

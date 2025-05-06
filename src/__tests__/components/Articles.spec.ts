@@ -7,21 +7,24 @@ describe('Articles.vue', () => {
     {
       title: 'Test Article 1',
       src: 'https://example.com/image1.jpg',
-      yearPublished: '2024'
+      yearPublished: '2024',
     },
     {
       title: 'Test Article 2',
       src: 'https://example.com/image2.jpg',
-      yearPublished: '2023'
-    }
+      yearPublished: '2023',
+    },
   ];
 
   beforeEach(() => {
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(mockArticles)
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(mockArticles),
+        })
+      )
+    );
   });
 
   it('fetches articles on mount', async () => {
@@ -56,11 +59,14 @@ describe('Articles.vue', () => {
 
   it('shows "View All" link when more than 3 articles', async () => {
     const manyArticles = [...mockArticles, ...mockArticles];
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve(manyArticles)
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve(manyArticles),
+        })
+      )
+    );
 
     const { container } = render(Articles);
     await vi.dynamicImportSettled();
@@ -70,7 +76,10 @@ describe('Articles.vue', () => {
   });
 
   it('handles fetch error gracefully', async () => {
-    vi.stubGlobal('fetch', vi.fn(() => Promise.reject('API Error')));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() => Promise.reject('API Error'))
+    );
     const consoleSpy = vi.spyOn(console, 'debug').mockImplementation(() => {});
 
     render(Articles);
@@ -80,11 +89,14 @@ describe('Articles.vue', () => {
   });
 
   it('does not render section when no articles', async () => {
-    vi.stubGlobal('fetch', vi.fn(() =>
-      Promise.resolve({
-        json: () => Promise.resolve([])
-      })
-    ));
+    vi.stubGlobal(
+      'fetch',
+      vi.fn(() =>
+        Promise.resolve({
+          json: () => Promise.resolve([]),
+        })
+      )
+    );
 
     const { container } = render(Articles);
     await vi.dynamicImportSettled();

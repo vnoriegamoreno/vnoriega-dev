@@ -5,7 +5,7 @@ import App from '../App.vue';
 describe('App.vue', () => {
   it('renders the main layout structure', () => {
     render(App);
-    
+
     expect(screen.getByRole('main')).toBeTruthy();
     expect(screen.getByRole('banner')).toBeTruthy();
 

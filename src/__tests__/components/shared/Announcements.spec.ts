@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/vue';
+import { render } from '@testing-library/vue';
 import Announcements from '../../../components/shared/Announcements.vue';
 
 describe('Announcements.vue', () => {
@@ -8,24 +8,24 @@ describe('Announcements.vue', () => {
   it('renders announcements container', () => {
     const { container } = render(Announcements, {
       props: {
-        announcements: mockAnnouncements
-      }
+        announcements: mockAnnouncements,
+      },
     });
-    
+
     expect(container.querySelector('.announcements')).toBeTruthy();
   });
 
   it('renders all provided announcements', () => {
     const { container } = render(Announcements, {
       props: {
-        announcements: mockAnnouncements
-      }
+        announcements: mockAnnouncements,
+      },
     });
 
     const listItems = container.querySelectorAll('.announcements li');
     expect(listItems.length).toBe(mockAnnouncements.length);
-    
-    mockAnnouncements.forEach(announcement => {
+
+    mockAnnouncements.forEach((announcement) => {
       expect(container.textContent).toContain(announcement);
     });
   });
@@ -33,8 +33,8 @@ describe('Announcements.vue', () => {
   it('renders empty list when no announcements provided', () => {
     const { container } = render(Announcements, {
       props: {
-        announcements: []
-      }
+        announcements: [],
+      },
     });
 
     const listItems = container.querySelectorAll('.announcements li');
@@ -45,8 +45,8 @@ describe('Announcements.vue', () => {
     const duplicateAnnouncements = ['Same Message', 'Same Message'];
     const { container } = render(Announcements, {
       props: {
-        announcements: duplicateAnnouncements
-      }
+        announcements: duplicateAnnouncements,
+      },
     });
 
     const listItems = container.querySelectorAll('.announcements li');

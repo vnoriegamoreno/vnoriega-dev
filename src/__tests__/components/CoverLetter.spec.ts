@@ -5,14 +5,14 @@ import CoverLetter from '../../components/CoverLetter.vue';
 describe('CoverLetter.vue', () => {
   it('renders cover letter section', () => {
     const { container } = render(CoverLetter);
-    
+
     const section = container.querySelector('.cover-letter-section');
     expect(section).toBeTruthy();
   });
 
   it('renders profile image correctly', () => {
     const { container } = render(CoverLetter);
-    
+
     const img = container.querySelector('.avatar img');
     expect(img).toBeTruthy();
     expect(img?.getAttribute('src')).toBe('/assets/profile-x4.png');
@@ -21,7 +21,7 @@ describe('CoverLetter.vue', () => {
 
   it('renders name and title correctly', () => {
     const { container } = render(CoverLetter);
-    
+
     const name = container.querySelector('.title');
     const role = container.querySelector('.heading');
     const tagline = container.querySelector('.body');
@@ -33,14 +33,14 @@ describe('CoverLetter.vue', () => {
 
   it('renders social media component', () => {
     const { container } = render(CoverLetter);
-    
+
     const socialMedia = container.querySelector('.social-media');
     expect(socialMedia).toBeTruthy();
   });
 
   it('maintains correct HTML structure', () => {
     const { container } = render(CoverLetter);
-    
+
     const article = container.querySelector('.cover-letter');
     expect(article?.tagName.toLowerCase()).toBe('article');
     expect(container.querySelector('h1')).toBeTruthy();

@@ -8,18 +8,18 @@ describe('Pill.vue', () => {
   it('renders pill container', () => {
     const { container } = render(Pill, {
       props: {
-        title: mockTitle
-      }
+        title: mockTitle,
+      },
     });
-    
+
     expect(container.querySelector('.pill')).toBeTruthy();
   });
 
   it('renders title correctly', () => {
     const { container } = render(Pill, {
       props: {
-        title: mockTitle
-      }
+        title: mockTitle,
+      },
     });
 
     const pillText = container.querySelector('.pill p');
@@ -29,8 +29,8 @@ describe('Pill.vue', () => {
   it('has correct role attribute', () => {
     const { container } = render(Pill, {
       props: {
-        title: mockTitle
-      }
+        title: mockTitle,
+      },
     });
 
     const pill = container.querySelector('.pill');
@@ -40,8 +40,8 @@ describe('Pill.vue', () => {
   it('handles empty title', () => {
     const { container } = render(Pill, {
       props: {
-        title: ''
-      }
+        title: '',
+      },
     });
 
     const pillText = container.querySelector('.pill p');
