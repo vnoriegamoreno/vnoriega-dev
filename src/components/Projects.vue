@@ -14,7 +14,7 @@
 
   onMounted(async () => {
     try {
-      const res = await fetch('https://api.vnoriega.dev/api/projects');
+      const res = await fetch(`${import.meta.env.BASE_API}/api/projects`);
       const data = await res.json();
       projects.value = data;
     } catch (error) {
