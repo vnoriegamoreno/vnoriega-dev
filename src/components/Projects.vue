@@ -1,8 +1,7 @@
 <script setup lang="ts">
-  import { computed } from 'vue';
+  import { computed, onMounted, ref } from 'vue';
   import ProjectCard from './shared/ProjectCard.vue';
   import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
-  import { projects } from '../mocks/projects';
 
   interface Project {
     title: string;
@@ -11,8 +10,20 @@
     techStack: string[];
   }
 
-  const canShowProjects = computed(() => projects.length >= 1);
-  const showViewAll = computed(() => projects.length > 3);
+  const projects = ref<Project[]>([]);
+
+  onMounted(async () => {
+    try {
+      const res = await fetch('https://api.vnoriega.dev/api/projects');
+      const data = await res.json();
+      projects.value = data;
+    } catch (error) {
+      console.debug('Error fetching projects: ', error);
+    }
+  });
+
+  const canShowProjects = computed(() => projects.value.length >= 1);
+  const showViewAll = computed(() => projects.value.length > 3);
 </script>
 
 <template>

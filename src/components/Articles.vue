@@ -1,8 +1,8 @@
 <script setup lang="ts">
-  import { computed } from 'vue';
+  import { computed, onMounted, ref } from 'vue';
   import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
   import PostCard from './shared/PostCard.vue';
-  import { articles } from '../mocks/posts';
+
 
   interface Article {
     title: string;
@@ -10,8 +10,20 @@
     yearPublished: string;
   }
 
-  const canShowArticles = computed(() => articles.length >= 1);
-  const showViewAll = computed(() => articles.length > 3);
+  const articles = ref<Article[]>([]);
+
+  onMounted(async () => {
+    try {
+      const res = await fetch('https://api.vnoriega.dev/api/articles');
+      const data = await res.json();
+      articles.value = data;
+    } catch (error) {
+      console.debug('Error fetching articles: ', error);
+    }
+  });
+
+  const canShowArticles = computed(() => articles.value.length >= 1);
+  const showViewAll = computed(() => articles.value.length > 3);
 </script>
 
 <template>
