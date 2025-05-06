@@ -14,7 +14,7 @@
 
   onMounted(async () => {
     try {
-      const res = await fetch(`${import.meta.env.BASE_API}/api/articles`);
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/articles`);
       const data = await res.json();
       articles.value = data;
     } catch (error) {
