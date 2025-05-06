@@ -3,7 +3,6 @@
   import RightArrowIcon from './shared/icons/RightArrowIcon.vue';
   import PostCard from './shared/PostCard.vue';
 
-
   interface Article {
     title: string;
     src: string;
