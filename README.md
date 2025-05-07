@@ -44,7 +44,7 @@ npm run build
 ```
 
 ## 🌐 Live Demo
-Visit vnoriega.dev to see the live version.
+Visit https://vnoriega.dev/ to see the live version.
 
 ## 📝 License
 © 2025 Vicente Noriega. All rights reserved.
