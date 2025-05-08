@@ -6,8 +6,8 @@
 
 <template>
   <div class="announcements">
-    <ul>
-      <li v-for="(announcement, i) in announcements" :key="`${announcement}-${i}`">
+    <ul class="ads-carousel">
+      <li class="ad" v-for="(announcement, i) in announcements" :key="`${announcement}-${i}`">
         {{ announcement }}
       </li>
     </ul>

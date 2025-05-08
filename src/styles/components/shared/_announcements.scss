@@ -1,19 +1,18 @@
 @use '../../variables' as *;
 @use '../../mixins' as *;
 
-$adWidth: 250px;
-$translateStart: calc(100vh - $adWidth);
+$adsWidth: 300px;
 
-@keyframes scrollLeft {
+@keyframes carouselAdsAnimation {
   0% {
-    transform: translateX($translateStart);
+    right: calc(-1 * ($adsWidth + 5px));
   }
   100% {
-    transform: translateX(calc(-1 * $translateStart));
+    right: 100%;
   }
 }
 
-@keyframes flashAd {
+@keyframes adColorAnimation {
   0% {
     color: $neutral-000;
   }
@@ -35,21 +34,25 @@ $translateStart: calc(100vh - $adWidth);
   @include responsive-font(tiny);
   @include flex-center;
 
-  ul {
-    animation: scrollLeft 10s linear infinite;
+  ul.ads-carousel {
+    height: 29px;
     list-style: none;
     margin: 0;
     padding: 0;
+    position: relative;
     text-align: center;
     white-space: nowrap;
     width: 100%;
 
-    li {
-      animation: flashAd 1s linear alternate infinite;
-      padding: 2.5px;
+    li.ad {
+      animation:
+        adColorAnimation 1s linear alternate infinite,
+        carouselAdsAnimation 10s linear infinite;
       display: inline-block;
+      padding: 2.5px;
+      position: absolute;
       text-align: center;
-      width: $adWidth;
+      width: $adsWidth;
     }
   }
 }
