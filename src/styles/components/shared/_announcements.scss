@@ -34,7 +34,7 @@ $adsWidth: 300px;
   @include responsive-font(tiny);
   @include flex-center;
 
-  ul.ads-carousel {
+  .ads-carousel {
     height: 29px;
     list-style: none;
     margin: 0;
@@ -44,7 +44,7 @@ $adsWidth: 300px;
     white-space: nowrap;
     width: 100%;
 
-    li.ad {
+    .ad {
       animation:
         adColorAnimation 1s linear alternate infinite,
         carouselAdsAnimation 10s linear infinite;
