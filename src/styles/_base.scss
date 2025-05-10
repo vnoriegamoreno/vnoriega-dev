@@ -14,20 +14,6 @@
 }
 
 body {
-  margin: 90px 60px;
-  width: calc(100% - 120px);
+  margin: 0px;
   @include flex-center;
-}
-
-@media (max-width: $breakpoint-tablet) {
-  body {
-    margin: 90px 30px;
-    width: calc(100% - 60px);
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  body {
-    margin: 70px 30px;
-  }
 }
