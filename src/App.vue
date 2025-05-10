@@ -9,7 +9,7 @@
 
 <template>
   <div>
-    <!-- <Announcements :announcements="['🚀 More Projects Coming Up ✨']" /> -->
+    <Announcements :announcements="['🚀 More Projects Coming Up ✨']" />
     <main id="main-content" role="main">
       <header class="site-header" role="banner">
         <CoverLetter />

@@ -39,7 +39,7 @@
 @media (max-width: $breakpoint-mobile) {
   #main-content {
     flex-direction: column;
-    overflow-y: inherit;
+    overflow-y: visible;
     position: relative;
 
     .site-header {

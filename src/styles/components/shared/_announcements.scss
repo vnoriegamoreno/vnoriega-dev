@@ -27,7 +27,8 @@ $adsWidth: 300px;
   left: 0;
   overflow: hidden;
   padding: 10px 0;
-  position: absolute;
+  // position: relative;
+  position: fixed;
   text-transform: uppercase;
   top: 0;
   width: 100%;
@@ -54,5 +55,14 @@ $adsWidth: 300px;
       text-align: center;
       width: $adsWidth;
     }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .announcements {
+    // position: sticky;
+    position: fixed;
+    // margin-bottom: 30px;
+    z-index: 1;
   }
 }
