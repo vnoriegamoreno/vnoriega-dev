@@ -4,7 +4,7 @@
 #main-content {
   display: flex;
   gap: clamp(40px, calc(40px + (123 - 40) * ((100vw - 768px) / (1280 - 768))), 123px);
-  height: 100vh;
+  height: calc(100vh - 51px);
   max-width: 1280px;
   overflow-y: auto;
   padding: 0 60px;
@@ -13,7 +13,7 @@
   .site-header {
     flex-direction: column;
     flex: 0 0 327px;
-    height: 100vh;
+    height: calc(100vh - 51px);
     position: sticky;
     top: 0;
     @include flex-center;

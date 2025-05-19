@@ -66,7 +66,6 @@
   }
 }
 
-// TODO: Fix flex layout for landscape mobile screens
 @media (max-height: 620px) {
   .avatar {
     img {
@@ -83,7 +82,10 @@
     margin: 50px 60px;
   }
   .cover-letter-section {
-    height: calc(100vh - 100px);
+    align-items: center;
+    height: calc(100vh - 51px);
+    justify-content: center;
+    margin-top: 0;
   }
   .avatar {
     display: none;
