@@ -12,7 +12,7 @@
   .site-header {
     flex-direction: column;
     flex: 0 0 327px;
-    height: calc(100vh - 51px);
+    height: 100vh;
     position: sticky;
     top: 0;
     @include flex-center;
