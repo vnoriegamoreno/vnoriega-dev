@@ -74,28 +74,39 @@
     }
   }
   .cover-letter {
-    margin-top: 0px;
+    margin-top: 51px;
   }
 }
-@media (max-height: 450px) {
+
+@media (max-height: 550px) {
   body {
-    margin: 50px 60px;
+    height: calc(100vh - 100px);
+    margin: 50px 0;
   }
   .cover-letter-section {
-    align-items: center;
-    height: calc(100vh - 51px);
-    justify-content: center;
     margin-top: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    @media (max-width: $breakpoint-mobile)  {
+      height: 100vh;
+    }
   }
   .avatar {
     display: none;
   }
 }
+
+
 @media (max-height: 380px) {
   body {
-    margin: 40px 60px;
+    margin: 0;
+    height: auto;
   }
   .cover-letter-section {
-    height: calc(100vh - 80px);
+    @media (max-width: $breakpoint-mobile) {
+      height: 100vh;
+    }
   }
 }
