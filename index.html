@@ -36,14 +36,24 @@
     <meta property="ttk:image" content="https://vnoriega.dev/assets/social-logo.avif" />
 
     <!-- Google tag (gtag.js) -->
+    <!-- Replace the current Google Analytics implementation with this optimized version -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM6NCE5G7D"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
-      gtag('config', 'G-CM6NCE5G7D');
+      gtag('config', 'G-CM6NCE5G7D', {
+        'send_page_view': false  // Disable automatic page views
+      });
+      // Only send page views when the page is fully loaded
+      window.addEventListener('load', function() {
+        gtag('event', 'page_view');
+      });
     </script>
+    <!-- Add these lines in the head section, before any other stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Poppins:wght@800&family=Roboto:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="app"></div>
