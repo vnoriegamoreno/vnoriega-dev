@@ -13,7 +13,23 @@
     <h3 class="project-card-title">{{ title }}</h3>
     <div class="project-card-wrapper">
       <figure class="project-card-image">
-        <img :src="src" :alt="`${title} project preview`" />
+        <picture>
+          <source
+            :srcset="src"
+            type="image/avif"
+          />
+          <source
+            :srcset="`${src} 2x, ${src} 1x`"
+            type="image/avif"
+          />
+          <img
+            :src="src"
+            :alt="`${title} project preview`"
+            loading="lazy"
+            fetchpriority="low"
+            decoding="async"
+          />
+        </picture>
       </figure>
       <div class="project-card-info">
         <article
