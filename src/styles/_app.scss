@@ -2,6 +2,7 @@
 @use './mixins' as *;
 
 #main-content {
+  background-color: $background-dark;
   display: flex;
   gap: clamp(40px, calc(40px + (123 - 40) * ((100vw - 768px) / (1280 - 768))), 123px);
   height: 100vh;

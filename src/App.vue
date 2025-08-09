@@ -4,12 +4,12 @@
   import Projects from './components/Projects.vue';
   import Articles from './components/Articles.vue';
   import Footer from './components/Footer.vue';
-  import Announcements from './components/shared/Announcements.vue';
+  // import Announcements from './components/shared/Announcements.vue';
 </script>
 
 <template>
   <div>
-    <Announcements :announcements="['🚀 More Projects Coming Up ✨']" />
+    <!-- <Announcements :announcements="['🚀 More Projects Coming Up ✨']" /> -->
     <main id="main-content" role="main">
       <header class="site-header" role="banner">
         <CoverLetter />
