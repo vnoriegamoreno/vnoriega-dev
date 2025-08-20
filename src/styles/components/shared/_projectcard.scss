@@ -10,7 +10,7 @@
     font-weight: normal;
     margin: 0 auto 20px auto;
     @include flex-center;
-    @include responsive-font(subheading);
+    @include responsive-font(md);
   }
 
   &-wrapper {
@@ -39,7 +39,7 @@
       line-height: 22px;
       margin: 0;
       text-align: justify;
-      @include responsive-font(body);
+      @include responsive-font(xs);
     }
   }
 

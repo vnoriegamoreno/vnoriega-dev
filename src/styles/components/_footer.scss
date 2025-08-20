@@ -9,7 +9,7 @@
 
   &-copyright {
     margin: 0;
-    @include responsive-font(body);
+    @include responsive-font(md);
 
     a {
       color: $neutral-100;

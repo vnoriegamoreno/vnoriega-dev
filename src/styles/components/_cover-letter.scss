@@ -30,20 +30,20 @@
     margin: 0 auto;
     position: relative;
     width: fit-content;
-    @include responsive-font(large);
+    @include responsive-font(xlg);
   }
 
   .body {
     font-weight: 200;
     margin: 8px 0 0 0;
-    @include responsive-font(subheading);
+    @include responsive-font(md);
   }
 }
 
 .heading {
   font-weight: 400;
   margin: 20px 0 0 0;
-  @include responsive-font(medium);
+  @include responsive-font(lg);
 }
 
 @media (max-width: $breakpoint-tablet) {
