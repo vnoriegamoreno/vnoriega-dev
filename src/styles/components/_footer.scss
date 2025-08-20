@@ -8,11 +8,12 @@
   text-align: center;
 
   &-copyright {
+    color: $neutral-100;
     margin: 0;
     @include responsive-font(md);
 
     a {
-      color: $neutral-100;
+      color: inherit;
       text-decoration: none;
     }
   }

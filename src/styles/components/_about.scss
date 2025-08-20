@@ -8,7 +8,7 @@
     color: $neutral-100;
     font-family: $font-family-secondary;
     font-weight: 900;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.15em;
     margin: 60px 0 45px 0;
     text-align: left;
     @include responsive-font(lg);
@@ -18,8 +18,7 @@
     p {
       color: $neutral-100;
       font-weight: $font-weight-lighter;
-      letter-spacing: 0.02em;
-      line-height: 22px;
+      line-height: 26px;
       margin: 18px 0 0 0;
       text-align: justify;
       @include responsive-font(xs);
