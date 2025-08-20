@@ -19,20 +19,21 @@
 
     .linkedin-icon,
     .github-icon {
-      width: 30px;
-      height: 30px;
+      width: 40px;
+      height: 40px;
     }
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
-  .social-media {
-    a {
-      .linkedin-icon,
-      .github-icon {
-        width: 26px;
-        height: 26px;
-      }
-    }
-  }
-}
+// TODO: Above rules should be deleted once that I cover responsive web design
+// @media (max-width: $breakpoint-mobile) {
+//   .social-media {
+//     a {
+//       .linkedin-icon,
+//       .github-icon {
+//         width: 26px;
+//         height: 26px;
+//       }
+//     }
+//   }
+// }

@@ -7,19 +7,20 @@
   color: $primary-900;
   display: flex;
   font-family: $font-family-secondary;
-  font-size: 20px;
+  @include responsive-font(xs);
   font-weight: 900;
-  height: 30px;
+  height: 40px;
   justify-content: center;
   letter-spacing: 0.05em;
   line-height: 15px;
-  width: 30px;
+  width: 40px;
 }
 
-@media (max-width: $breakpoint-mobile) {
-  .cv-icon {
-    font-size: 17px;
-    height: 26px;
-    width: 26px;
-  }
-}
+// TODO: Above rules should be deleted once that I cover responsive web design
+// @media (max-width: $breakpoint-mobile) {
+//   .cv-icon {
+//     font-size: 17px;
+//     height: 26px;
+//     width: 26px;
+//   }
+// }
