@@ -25,26 +25,29 @@
 
   .title {
     border-right: 2px solid transparent;
+    color: $neutral-100;
     display: flex;
     justify-content: center;
+    letter-spacing: 0.15em;
     margin: 0 auto;
     position: relative;
     width: fit-content;
     @include responsive-font(xlg);
   }
-
+  .heading {
+    color: $neutral-100;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+    @include responsive-font(lg);
+  }
   .body {
+    color: $neutral-100;
     font-weight: 200;
     margin: 8px 0 0 0;
     @include responsive-font(md);
   }
 }
 
-.heading {
-  font-weight: 400;
-  margin: 20px 0 0 0;
-  @include responsive-font(lg);
-}
 
 @media (max-width: $breakpoint-tablet) {
   .cover-letter-section {

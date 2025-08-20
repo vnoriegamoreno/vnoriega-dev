@@ -7,7 +7,7 @@
   color: $primary-900;
   display: flex;
   font-family: $font-family-secondary;
-  @include responsive-font(xs);
+  @include responsive-font(md);
   font-weight: 900;
   height: 40px;
   justify-content: center;
