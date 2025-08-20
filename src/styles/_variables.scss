@@ -28,26 +28,14 @@ $font-family-tertiary: 'Poppins', 'Arial', 'sans-serif';
 
 // Mixin to use responsive font sizes
 @mixin responsive-font($size) {
-  @if $size == 'base' {
-    font-size: 1em;
-  } @else if $size == 'tiny' {
-    font-size: 16px;
-  } @else if $size == 'body' {
-    font-size: 18px;
-  } @else if $size == 'heading' {
-    font-size: 22px;
-  } @else if $size == 'large' {
-    font-size: 28px;
-  } @else if $size == 'medium' {
+  @if $size == 'xs' {
     font-size: 24px;
-  } @else if $size == 'small' {
-    font-size: 14px;
-  } @else if $size == 'subheading' {
-    font-size: 20px;
-  } @else if $size == 'title' {
+  } @else if $size == 'md' {
     font-size: 26px;
-  } @else if $size == 'xs' {
-    font-size: 12px;
+  } @else if $size == 'lg' {
+    font-size: 32px;
+  } @else if $size == 'xlg' {
+    font-size: 40px;
   }
 }
 
