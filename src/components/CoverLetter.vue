@@ -31,7 +31,7 @@
       <h1 class="title">VNORIEGA</h1>
       <h2 class="heading">Software Engineer</h2>
       <p class="body">I design and build digital experiences</p>
+      <SocialMedia />
     </article>
-    <SocialMedia />
   </section>
 </template>

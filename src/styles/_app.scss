@@ -27,10 +27,16 @@
 
 @media (max-width: $breakpoint-tablet) {
   #main-content {
-    padding: 0 30px;
+    flex-direction: column;
+    height: auto;
+    overflow-y: auto;
+    padding: 65px 30px;
     width: calc(100% - 60px);
 
     .site-header {
+      flex: 1;
+      height: auto;
+      position: relative;
       @media (max-height: 450px) {
         height: 100vh;
       }

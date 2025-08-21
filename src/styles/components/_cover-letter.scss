@@ -51,21 +51,19 @@
 
 @media (max-width: $breakpoint-tablet) {
   .cover-letter-section {
+    align-items: center;
+    flex-direction: row;
     justify-content: flex-start;
     margin-top: 20px;
-  }
-
-  .avatar {
-    img {
-      height: 200px;
-      width: 200px;
-    }
+    width: 100%;
   }
 }
 
 @media (max-width: $breakpoint-mobile) {
   .cover-letter-section {
+    flex-direction: column;
     height: auto;
+    justify-content: center;
   }
 }
 
