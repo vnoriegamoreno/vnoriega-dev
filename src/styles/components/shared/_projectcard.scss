@@ -63,3 +63,24 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-tablet) {
+  .project-card {
+    &-wrapper {
+      flex-direction: row;
+    }
+
+    &-image {
+      flex: 0 0 321px;
+      margin-right: 45px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .project-card {
+    &-wrapper {
+      flex-direction: column;
+    }
+  }
+}
