@@ -4,6 +4,7 @@
   import Projects from './components/Projects.vue';
   import Articles from './components/Articles.vue';
   import Footer from './components/Footer.vue';
+  import Experience from './components/Experience.vue';
   // import Announcements from './components/shared/Announcements.vue';
 </script>
 
@@ -17,6 +18,9 @@
       <div class="content-wrapper">
         <section id="about" aria-label="About">
           <About />
+        </section>
+        <section id="experience" aria-label="Experience">
+          <Experience />
         </section>
         <section id="projects" aria-label="Projects">
           <Projects />

@@ -3,13 +3,13 @@
 .pill {
   p {
     background: $primary-700;
-    border-radius: 20px;
+    border-radius: 50px;
     color: $neutral-100;
     display: inline-block;
     font-family: $font-family-secondary;
     font-weight: 300;
     margin: 0;
-    padding: 3px 7px;
+    padding: 12px;
     @include responsive-font(xs);
   }
 }
