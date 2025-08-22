@@ -1,6 +1,6 @@
 <template>
   <section class="about" aria-labelledby="about-heading">
-    <h2 id="about-heading" class="about-title">ABOUT</h2>
+    <h2 id="about-heading" class="about-title">ABOUT ME</h2>
     <article class="about-content">
       <p>
         I'm a software engineer passionate about developing scalable and high-performance solutions.
