@@ -6,7 +6,7 @@
 
 <template>
   <nav class="social-media" aria-label="Social media links">
-    <a
+    <!-- <a
       href="/assets/resume.pdf"
       target="_blank"
       rel="noopener noreferrer"
@@ -14,7 +14,7 @@
       download="resume.pdf"
     >
       <CvIcon />
-    </a>
+    </a> -->
     <a
       href="https://linkedin.com/in/vnoriegadev"
       target="_blank"

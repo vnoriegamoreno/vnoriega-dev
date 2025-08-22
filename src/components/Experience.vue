@@ -31,27 +31,28 @@ import Pill from './shared/Pill.vue';
           itemscope
           itemtype="http://schema.org/ItemList"
         >
-          <Pill title="JavaScript" role="listitem" />
-          <Pill title="Vue.js" role="listitem" />
-          <Pill title="Vue Test Utils" role="listitem" />
-          <Pill title="Ember.js" role="listitem" />
-          <Pill title="Mocha.js" role="listitem" />
-          <Pill title="TypeScript" role="listitem" />
-          <Pill title="Jest" role="listitem" />
           <Pill title="CSS" role="listitem" />
+          <Pill title="Ember.js" role="listitem" />
           <Pill title="ESLint" role="listitem" />
           <Pill title="Git" role="listitem" />
+          <Pill title="Git" role="listitem" />
+          <Pill title="JavaScript" role="listitem" />
+          <Pill title="Jest" role="listitem" />
+          <Pill title="Mocha.js" role="listitem" />
+          <Pill title="TypeScript" role="listitem" />
+          <Pill title="Vue Test Utils" role="listitem" />
+          <Pill title="Vue.js" role="listitem" />
         </footer>
       </div>
     </article>
   </div>
   <p class="experience-link">
     <a
-      href="#"
-      title="Download Resume"
       aria-label="Download full Resume"
       class="experience-link-text"
-      @click.prevent
+      download="vnoriega-resume.pdf"
+      href="/assets/resume.pdf"
+      title="Download Resume"
     >
       Download Resume
     </a>
