@@ -72,3 +72,15 @@
     @include responsive-font(xs);
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .experience {
+    &-details {
+      flex-direction: column;
+
+      &-job-period {
+        margin: 0 0 10px 0;
+      }
+    }
+  }
+}
