@@ -14,6 +14,7 @@
   
   &-details {
     display: flex;
+    margin-bottom: 60px;
 
     &-job-period {
       color: $neutral-100;
@@ -47,13 +48,19 @@
         font-weight: $font-weight-black;
         margin: 0;
         @include responsive-font(md);
+
+        &-separator {
+          font-weight: lighter;
+          margin: 0 15px;
+        }
       }
 
       &-description {
         font-family: $font-family-base;
-        letter-spacing: 0.05em;
-        text-align: justify;
         font-weight: lighter;
+        letter-spacing: 0.05em;
+        margin-bottom: 26px;
+        text-align: justify;
         @include responsive-font(xs);
       }
     }
