@@ -1,0 +1,74 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.experience {
+  &-title {
+    color: $neutral-100;
+    font-family: $font-family-secondary;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    margin: 60px 0 45px 0;
+    text-align: left;
+    @include responsive-font(lg);
+  }
+  
+  &-details {
+    display: flex;
+
+    &-job-period {
+      color: $neutral-100;
+      flex-basis: auto;
+      font-family: $font-family-base;
+      font-weight: lighter;
+      margin: 0 26px 0 0;
+      position: relative;
+      @include responsive-font(xs);
+
+      &-end-year {
+        margin-left: 22.5px;
+      }
+
+      &-separator {
+        background: $neutral-100;
+        content: " ";
+        height: 2px;
+        position: absolute;
+        top: 20px;
+        width: 15px;
+      }
+    }
+
+    &-job-overview {
+      color: $neutral-100;
+      flex: 6;
+
+      &-title {
+        font-family: $font-family-base;
+        font-weight: $font-weight-black;
+        margin: 0;
+        @include responsive-font(md);
+      }
+
+      &-description {
+        font-family: $font-family-base;
+        letter-spacing: 0.05em;
+        text-align: justify;
+        font-weight: lighter;
+        @include responsive-font(xs);
+      }
+    }
+  }
+}
+
+.experience-link {
+  margin-top: 80px;
+  text-align: center;
+
+  a {
+    color: $neutral-100;
+    font-family: $font-family-secondary;
+    font-weight: lighter;
+    text-decoration: none;
+    @include responsive-font(xs);
+  }
+}
