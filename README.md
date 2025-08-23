@@ -6,26 +6,29 @@ A modern, responsive portfolio website built with Vue 3, TypeScript, and Sass, s
 
 - Responsive design optimized for all devices
 - Dark theme with elegant color scheme
-- Project showcase with detailed descriptions
+- ~~Project showcase with detailed descriptions~~ _(Working on it)_
 - ~~Technical blog articles section~~ _(Working on it)_
 - Social media integration
 - Downloadable CV/Resume
 - Accessibility-focused implementation
 
 ## 🛠 Tech Stack
-
-- Vue 3
-- TypeScript
-- Sass
-- Vite
-- Schema.org markup for SEO
+- **Framework**: [Vue 3](https://vuejs.org/) + `<script setup>`
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: TypeScript
+- **Styling**: SCSS + CSS Modules
+- **Routing**: Vue Router
+- **Deployment**: Vercel
 
 ## 📦 Project Structure
-
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
-
+```bash
+├── public/              # Static assets served directly (e.g. favicon, images)
+│   ├── assets/          # Local images, fonts, etc.
+├── src/                 # Source code
+│   ├── components/      # Reusable Vue components
+│   ├── App.vue          # Root Vue component
+│   └── main.ts          # App entry point
+```
 
 ## 🚀 Getting Started
 
