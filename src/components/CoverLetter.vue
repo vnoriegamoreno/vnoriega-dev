@@ -1,5 +1,7 @@
 <script setup lang="ts">
+  import { computed } from 'vue';
   import SocialMedia from './shared/SocialMedia.vue';
+  const profileAvatar = computed(() => "/assets/vnoriega-animated.gif");
 </script>
 
 <template>
@@ -7,17 +9,15 @@
     <figure class="avatar">
       <picture>
         <source
-          srcset="/assets/profile-x4.avif"
-          type="image/avif"
+          :srcset="profileAvatar"
           media="(min-width: 1024px)"
         />
         <source
-          srcset="/assets/profile-x4.avif 2x, /assets/profile-x4.avif 1x"
-          type="image/avif"
+          :srcset="`${profileAvatar} 2x, ${profileAvatar} 1x`"
           media="(max-width: 1023px)"
         />
         <img
-          src="/assets/profile-x4.avif"
+          :src="profileAvatar"
           alt="Vicente Noriega's profile photo"
           loading="eager"
           fetchpriority="high"
