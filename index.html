@@ -35,6 +35,12 @@
     <meta property="ttk:description" content="Software Engineer specializing in full-stack development" />
     <meta property="ttk:image" content="https://vnoriega.dev/assets/social-logo.avif" />
 
+    <!-- Add this in the head section, before your stylesheets -->
+    <link rel="preload" href="/assets/vnoriega-animated.gif" as="image" type="image/avif" fetchpriority="high">
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CM6NCE5G7D"></script>
     <script>
@@ -44,13 +50,5 @@
 
       gtag('config', 'G-CM6NCE5G7D');
     </script>
-
-    <!-- Add this in the head section, before your stylesheets -->
-    <link rel="preload" href="/assets/profile-x4.avif" as="image" type="image/avif" fetchpriority="high">
-    <link rel="preload" href="/assets/mid-poktapok.avif" as="image" type="image/avif" fetchpriority="high">
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

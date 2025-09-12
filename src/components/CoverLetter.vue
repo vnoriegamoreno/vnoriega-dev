@@ -19,11 +19,11 @@
         <img
           :src="profileAvatar"
           alt="Vicente Noriega's profile photo"
-          loading="eager"
-          fetchpriority="high"
-          width="400"
-          height="400"
           decoding="async"
+          fetchpriority="high"
+          height="400"
+          loading="eager"
+          width="400"
         />
       </picture>
     </figure>
