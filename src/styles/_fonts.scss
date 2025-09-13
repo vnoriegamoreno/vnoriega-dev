@@ -1,1 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Poppins:wght@800&family=Roboto:wght@200;300;400;500;700;800;900&display=swap');
+/* Manrope */
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope/static/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: url('/assets/fonts/Manrope/static/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Poppins */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/assets/fonts/Poppins/Poppins-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Roboto */
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto/static/Roboto_Condensed-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url('/assets/fonts/Roboto/static/Roboto_Condensed-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
