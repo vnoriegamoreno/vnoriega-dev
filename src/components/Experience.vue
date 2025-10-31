@@ -97,7 +97,7 @@ onMounted(() => {
       href="/assets/resume.pdf"
       title="Download Resume"
     >
-      Download Resume
+      Download Full Resume
     </a>
   </p>
 </template>
