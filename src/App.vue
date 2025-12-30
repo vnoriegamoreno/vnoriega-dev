@@ -6,72 +6,17 @@
   import Articles from './components/Articles.vue';
   import Footer from './components/Footer.vue';
   import Experience from './components/Experience.vue';
+  import { useEffect } from './effects';
   // import Announcements from './components/shared/Announcements.vue';
 
-  let snowInterval: number | null = null;
-  let activeSnowflakes = 0;
-  const MAX_SNOWFLAKES = 50;
-
-  function createSnowflake() {
-    if (activeSnowflakes >= MAX_SNOWFLAKES) return;
-    
-    activeSnowflakes++;
-    const snowflake = Object.assign(
-      document.createElement('div'),
-      {
-        className: 'snowflake',
-        style: `
-        left: ${Math.random() * window.innerWidth}px;
-        top: -5px;
-        opacity: ${Math.random() * 0.8 + 0.2};
-        transform: scale(${Math.random() * 1.5 + 0.5});`
-      }
-    )
-
-    document.body.appendChild(snowflake);
-
-    let posY = -5;
-    let speed = Math.random() * 2 + 1;
-    let wobble = 0;
-
-    function fall() {
-      posY += speed;
-      wobble += 0.02;
-      snowflake.style.top = posY + 'px';
-      snowflake.style.left =
-        parseFloat(snowflake.style.left) +
-        Math.sin(wobble) * 2 + 'px';
-
-      if (posY < window.innerHeight) {
-        requestAnimationFrame(fall);
-      } else {
-        snowflake.remove();
-        activeSnowflakes--;
-      }
-    }
-
-    fall();
-  }
-
-  function generateSnow() {
-    snowInterval = window.setInterval(createSnowflake, 200);
-  }
-
-  function stopSnow() {
-    if (snowInterval) {
-      clearInterval(snowInterval);
-      snowInterval = null;
-    }
-    document.querySelectorAll('.snowflake').forEach(flake => flake.remove());
-    activeSnowflakes = 0;
-  }
+  const effect = useEffect();
 
   onMounted(() => {
-    generateSnow();
+    effect.start();
   });
 
   onUnmounted(() => {
-    stopSnow();
+    effect.stop();
   });
 </script>
 
