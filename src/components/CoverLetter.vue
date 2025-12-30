@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed } from 'vue';
   import SocialMedia from './shared/SocialMedia.vue';
-  const profileAvatar = computed(() => "/assets/vnoriega-animated.gif");
+  const profileAvatar = computed(() => "/assets/profile/anime/vnoriega-anime-christmas.jpg");
 </script>
 
 <template>
