@@ -1,4 +1,5 @@
 <script setup lang="ts">
+  import { onMounted, onUnmounted } from 'vue';
   import CoverLetter from './components/CoverLetter.vue';
   import About from './components/About.vue';
   import Projects from './components/Projects.vue';
@@ -6,15 +7,23 @@
   import Footer from './components/Footer.vue';
   import Experience from './components/Experience.vue';
   // import Announcements from './components/shared/Announcements.vue';
+
+  let snowInterval: number | null = null;
+  let activeSnowflakes = 0;
+  const MAX_SNOWFLAKES = 50;
+
   function createSnowflake() {
+    if (activeSnowflakes >= MAX_SNOWFLAKES) return;
+    
+    activeSnowflakes++;
     const snowflake = Object.assign(
       document.createElement('div'),
       {
         className: 'snowflake',
         style: `
-        left: ${Math.random() * innerWidth}px;
+        left: ${Math.random() * window.innerWidth}px;
         top: -5px;
-        opacity: ${Math.random()};
+        opacity: ${Math.random() * 0.8 + 0.2};
         transform: scale(${Math.random() * 1.5 + 0.5});`
       }
     )
@@ -33,19 +42,37 @@
         parseFloat(snowflake.style.left) +
         Math.sin(wobble) * 2 + 'px';
 
-      posY < innerHeight
-        ? requestAnimationFrame(fall)
-        : snowflake.remove();
+      if (posY < window.innerHeight) {
+        requestAnimationFrame(fall);
+      } else {
+        snowflake.remove();
+        activeSnowflakes--;
+      }
     }
 
     fall();
   }
 
   function generateSnow() {
-    setInterval(createSnowflake, 100);
+    snowInterval = window.setInterval(createSnowflake, 200);
   }
 
-  generateSnow();
+  function stopSnow() {
+    if (snowInterval) {
+      clearInterval(snowInterval);
+      snowInterval = null;
+    }
+    document.querySelectorAll('.snowflake').forEach(flake => flake.remove());
+    activeSnowflakes = 0;
+  }
+
+  onMounted(() => {
+    generateSnow();
+  });
+
+  onUnmounted(() => {
+    stopSnow();
+  });
 </script>
 
 <template>
@@ -81,13 +108,14 @@
     margin: 0;
     padding: 0;
     background-color: black;
-    overflow: hidden;
   }
 
   .snowflake {
-    position: absolute;
+    position: fixed;
     width: 4px;
     height: 4px;
     background-color: white;
+    pointer-events: none;
+    z-index: 9999;
   }
 </style>
