@@ -4,6 +4,23 @@ import JobDescription from './shared/JobDescription.vue';
 
 const experience = ref<any>([]);
 
+const downloadFullResume = async () => {
+  try {
+    const response = await fetch('/assets/resume.pdf');
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'vnoriega-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error('Error downloading resume:', error);
+  }
+};
+
 onMounted(() => {
   experience.value = [
     {
@@ -90,7 +107,8 @@ onMounted(() => {
     />
   </div>
   <p class="experience-link">
-    <a
+    <button
+      @click="downloadFullResume"
       aria-label="Download full Resume"
       class="experience-link-text"
       download="vnoriega-resume.pdf"
@@ -98,6 +116,6 @@ onMounted(() => {
       title="Download Resume"
     >
       Download Full Resume
-    </a>
+    </button>
   </p>
 </template>
